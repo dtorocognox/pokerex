@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokerex">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+    <link rel="stylesheet" type="text/css"  href="css/estilos.css">
+</head>
+<body>
+    <div ng-controller="controladorLista" class="contenedor">
+        <div class="cuadros" ng-repeat="pokemon in pokemons">
+            <a href="#ficha">
+                <img ng-src="img/pokemonsImg/{{pokemon.name | lowercase}}.jpg" alt="image" class="imgpoke" ng-click="click(pokemon.id)">
+                <div>N°: {{pokemon.id}}</div>
+                <div>{{pokemon.name}}</div>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="js/code.js"></script>
+</html>

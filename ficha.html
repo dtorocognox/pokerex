@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokerex">
+<head>
+    <meta charset="UTF-8">
+    <title>Información</title>
+    <link rel="stylesheet" type="text/css"  href="css/estilos.css">
+</head>
+<body>
+    <a id="home" href="#lista">Home</a>
+    <div ng-controller="FichaTecnica" id="ficha">
+        <div class="cajas">
+            <strong>Datos</strong>
+            <p>N°: {{pokemons.id}}</p>
+            <p>Nombre: {{pokemons.name}}</p>
+        </div>
+        <div class="cajas">
+            <strong>Estadísticas</strong>
+            <p>Vida: {{pokemons.stats.hp}}</p>
+            <p>Ataque: {{pokemons.stats.attack}}</p>
+            <p>Defensa: {{pokemons.stats.defense}}</p>
+            <p>Velocidad de Ataque: {{pokemons.stats['sp.atk']}}</p>
+            <p>Velocidad de Defensa: {{pokemons.stats['sp.def']}}</p>
+            <p>Velocidad: {{pokemons.stats.speed}}</p>
+            <p>Total: {{pokemons.stats.total}}</p>
+        </div>
+        <div class="cajas" id="evoluciones">
+            <strong>Evoluciones</strong>
+            <div ng-repeat="pokemon in pokemons.evolution">
+                <img ng-src="img/pokemonsImg/{{pokemon | lowercase}}.jpg" alt="image" class="imgpoke">
+                {{pokemon}}
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="js/code.js"></script>
+</html>
