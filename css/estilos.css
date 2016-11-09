@@ -7,7 +7,7 @@ body{
 }
 
 header{
-background-color: gray;
+background-color: #DF0101;
 display: flex;
 }
 
@@ -64,4 +64,13 @@ width: 85px;
 #home{
     margin: 20px;
     font-weight: bold;
+}
+
+.cajasFicha{
+    width: 500px;
+    border-style: groove;
+}
+
+#total > #ficha{
+    padding-left: 30%;
 }
